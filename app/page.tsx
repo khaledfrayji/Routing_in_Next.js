@@ -5,7 +5,7 @@ const page = () => {
   console.log("What type of component am I?")
   return (
   <>
-  <Counter/>
+
   </>
   )
 }
