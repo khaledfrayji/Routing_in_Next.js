@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "login route",
-  description: "saddsadasdasdsadsada",
+  title: "Developer Community Platform | Connect, Blog, and Grow",
+  description:
+    "A community platform for developers to log in, publish blogs, like, comment, share ideas, and collaborate with other builders.",
 };
 
 export default function RootLayout({
