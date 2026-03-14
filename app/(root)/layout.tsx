@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
 import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Introduction to Next.js 16",
+  title: "login route",
   description: "saddsadasdasdsadsada",
 };
 
@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-   
+<Navbar />
         {children}
   
       </body>
