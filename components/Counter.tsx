@@ -6,6 +6,7 @@ const Counter = () => {
   return (
   <div>
     <h1>Likes: {likes}</h1>
+    <h2>Hello from terminal</h2>
     <button onClick={() => setLikes(likes + 1)}>
       Like
     </button>
