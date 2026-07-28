@@ -1,7 +1,10 @@
+//file that wraps every single page with
+//  Navbar on top and Footer on bottom
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Introduction to Next.js 16",
-  description: "saddsadasdasdsadsada",
+  title: "DevCommunity",
+  description: "A platform for developers to connect, share, and grow together.",
 };
 
 export default function RootLayout({
@@ -24,12 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+         <main className="flex-1">{children}</main>
+        <Footer />
+        </body>
     </html>
   );
 }
